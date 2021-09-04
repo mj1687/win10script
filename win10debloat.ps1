@@ -739,7 +739,21 @@ Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Policies
 
     Write-Host "Showing known file extensions..."
     Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -Name "HideFileExt" -Type DWord -Value 0
-
+	Write-Host "Removing some uwps..."
+	Get-AppxPackage Microsoft.MicrosoftOfficeHub | Remove-AppxPackage
+	Get-AppxPackage Microsoft.MixedReality.Portal | Remove-AppxPackage
+	Get-AppxPackage Microsoft.MSPaint | Remove-AppxPackage
+	Get-AppxPackage Microsoft.Office.OneNote | Remove-AppxPackage
+	Get-AppxPackage Microsoft.Windows.NarratorQuickStart | Remove-AppxPackage
+	Get-AppxPackage Microsoft.GetHelp | Remove-AppxPackage
+	Get-AppxPackage Microsoft.Todos | Remove-AppxPackage
+	Get-AppxPackage Microsoft.WindowsFeedbackHub| Remove-AppxPackage
+	Get-AppxPackage Microsoft.WindowsMaps | Remove-AppxPackage
+	Get-AppxPackage Microsoft.WindowsSoundRecorder | Remove-AppxPackage
+	Get-AppxPackage Microsoft.ZuneMusic | Remove-AppxPackage
+	Get-AppxPackage Microsoft.ZuneVideo | Remove-AppxPackage
+	Get-AppxPackage Microsoft.MicrosoftStickyNotes | Remove-AppxPackage
+	Get-AppxPackage MicrosoftTeams | Remove-AppxPackage
     Write-Host "Essential Tweaks Completed"
 })
 
