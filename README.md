@@ -12,3 +12,6 @@ This is the Ultimate Windows 10 Script from a creation from multiple debloat scr
 - Some customization
 
 For complete details check out https://christitus.com/debloat-windows-10-2020/
+
+
+use command iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/mj1687/win10script/master/win10debloat.ps1'))
